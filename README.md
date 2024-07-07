@@ -1,26 +1,38 @@
-Klasifikasi menggunakan Jaringan Saraf Tiruan
-Deskripsi Proyek
-Proyek ini bertujuan untuk mengimplementasikan model klasifikasi menggunakan jaringan saraf tiruan untuk dataset Fashion MNIST. Dataset ini terdiri dari gambar-gambar berukuran 28x28 piksel yang mewakili 10 kategori pakaian yang berbeda.
+# Klasifikasi Fashion MNIST menggunakan Jaringan Saraf Tiruan
 
-Langkah-langkah Proyek
-1. Persiapan
-Import Library: Mengimpor TensorFlow untuk membangun dan melatih model, NumPy untuk manipulasi data, dan Matplotlib untuk visualisasi.
-2. Dataset
-Fashion MNIST: Dataset ini terdiri dari 60,000 gambar pelatihan dan 10,000 gambar uji, diambil dari berbagai produk pakaian.
-3. Preprocessing Data
-Normalisasi: Nilai piksel dalam gambar dinormalisasi ke rentang [0, 1] dengan membagi setiap nilai piksel dengan 255.
-4. Membangun Arsitektur Model
-Arsitektur: Model jaringan saraf terdiri dari:
-Flatten Layer sebagai input untuk meratakan gambar 2D menjadi array 1D.
-Dense Layers dengan aktivasi ReLU sebagai lapisan tersembunyi.
-Dense Layer dengan aktivasi softmax sebagai output untuk menghasilkan probabilitas dari setiap kategori pakaian.
-5. Pelatihan Model
-Compiling: Menggunakan fungsi loss 'sparse_categorical_crossentropy', optimizer 'adam', dan metrik 'accuracy'.
-Early Stopping: Menggunakan EarlyStopping untuk menghentikan pelatihan jika tidak terjadi peningkatan dalam loss pada data validasi.
-6. Evaluasi Model
-Pengukuran Kinerja: Mengukur akurasi model pada data uji yang tidak terlibat dalam pelatihan.
-7. Prediksi
-Prediksi: Menggunakan model untuk memprediksi kategori pakaian dari gambar-gambar baru pada data uji.
-Hasil dan Kesimpulan
-Model yang dihasilkan mencapai akurasi sekitar [nilai akurasi di sini] pada data uji.
-Kesimpulan: Proyek ini menunjukkan bahwa jaringan saraf tiruan dapat efektif digunakan untuk melakukan klasifikasi gambar dalam konteks dataset Fashion MNIST.
+Proyek ini bertujuan untuk mengimplementasikan model klasifikasi menggunakan jaringan saraf tiruan untuk dataset Fashion MNIST. Dataset ini terdiri dari gambar berukuran 28x28 piksel yang mewakili 10 kategori pakaian yang berbeda.
+
+### Dataset
+
+Proyek ini menggunakan dataset Fashion MNIST yang terdiri dari 60,000 gambar pelatihan dan 10,000 gambar uji. Setiap gambar direpresentasikan dalam skala abu-abu 28x28 piksel.
+
+### Langkah-langkah Proyek:
+
+1. **Persiapan Data**: 
+   - Memuat dataset dan membaginya menjadi data pelatihan dan data uji.
+   - Melakukan normalisasi data dengan membagi nilai piksel dengan 255.
+
+2. **Membangun Model**: 
+   - Menggunakan arsitektur jaringan saraf dengan lapisan-lapisan Dense dan aktivasi ReLU.
+   - Melatih model dengan data pelatihan dan memvalidasi dengan data validasi untuk menghindari overfitting.
+
+3. **Pelatihan dan Evaluasi**: 
+   - Mengompilasi model dengan fungsi loss 'sparse_categorical_crossentropy', optimizer 'adam', dan metrik 'accuracy'.
+   - Menggunakan Early Stopping untuk menghentikan pelatihan jika tidak ada peningkatan pada data validasi.
+   - Mengevaluasi model pada data uji untuk mengukur akurasi dan performa secara keseluruhan.
+
+4. **Visualisasi**: 
+   - Menampilkan grafik untuk memvisualisasikan akurasi dan loss pada setiap epoch selama pelatihan.
+
+### Persyaratan:
+
+Untuk menjalankan proyek ini, pastikan Anda memiliki:
+- Python 3.x
+- Libraries: TensorFlow, NumPy, Matplotlib
+
+### Penggunaan:
+
+Untuk menggunakan proyek ini:
+1. Pastikan semua persyaratan terpenuhi dengan menginstal libraries yang diperlukan.
+2. Eksekusi script pada file Python yang disediakan (`main.ipynb`) untuk melihat detail implementasi dan hasilnya.
+
